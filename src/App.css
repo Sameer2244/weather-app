@@ -1,0 +1,144 @@
+.App {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: radial-gradient(circle, rgba(65, 65, 65, 1) 0%, rgba(45, 45, 45, 1) 46%, rgba(17, 17, 17, 1) 100%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+}
+
+.other-info {
+  flex: 1;
+  color: rgb(182, 182, 182);
+  margin: 5rem 0;
+}
+
+.temp-image {
+  flex: 1;
+}
+
+.temp-image img {
+  width: 50vw;
+  height: 100vh;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.btn {
+  background-color: rgb(65, 147, 241);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 2rem auto;
+}
+
+.temp-city{
+  z-index: 6;
+  color: white;
+  margin: 10rem 0 0 5rem;
+  font-weight: 400;
+}
+
+.temp-city h1{
+  margin: 0;
+  font-size: 6rem;
+  font-weight: lighter;
+}
+
+input{
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  font-weight: lighter;
+  height: 2rem;
+  
+}
+
+input:focus{
+  background-color: rgba(0, 0, 0, 0);
+  outline: 0px;
+}
+
+.top-cities{
+  font-size: 1.5rem;
+  font-weight: lighter;
+  width: 80%;
+  margin: auto;
+}
+
+.top-cities p{
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.movemid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-details{
+  font-size: 1.5rem;
+  font-weight: lighter;
+  width: 80%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 786px) {
+  .App{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    background: radial-gradient(circle, rgba(65, 65, 65, 1) 0%, rgba(45, 45, 45, 1) 46%, rgba(17, 17, 17, 1) 100%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+  .temp-image img {
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    object-fit: cover;
+  }
+  .other-info {
+    flex: 1;
+    color: rgb(182, 182, 182);
+    margin: 5rem 0;
+    width: 100vw;
+  }
+}
